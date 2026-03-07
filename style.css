@@ -56,9 +56,11 @@ gap:60px;
 min-height:100vh;
 }
 
-.home-img img{
-width:320px;
-border-radius:50%;
+.home-img img {
+    width: 329px;
+    height: 329px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .home-content h1{
@@ -234,6 +236,7 @@ left:0;
 .container.right::after{
 left:10px;
 }
+
 
 
 
