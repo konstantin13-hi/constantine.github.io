@@ -14,12 +14,19 @@ html{
     font-size: 62.5%;
 }
 
+:root {
+    --bg-color: black;
+    --text-color: white;
+    --accent-color: #b74b4b;
+    --profile-img: url('main.png');
+}
+
 body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header{
@@ -39,7 +46,7 @@ header{
 
 .logo{
     font-size: 3rem;
-    color: #b74b4b;
+    color: var(--accent-color);
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -60,27 +67,70 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* --- Гамбургер --- */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Переключатель темы */
+#theme-toggle {
+    display: none;
+}
+
+.theme-btn {
+    cursor: pointer;
+    font-size: 2rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 12%;
+    z-index: 101;
 }
 
 @media(max-width:995px){
-    nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    .hamburger {
+        display: flex;
+        position: fixed;
+        top: 1.5rem;
+        right: 5%;
+        z-index: 101;
     }
 
-    nav.active{
-        display: block;
+    nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #161616;
+        padding: 2rem;
+        transition: 0.3s;
+        z-index: 100;
+    }
+
+    #menu-toggle:checked ~ nav {
+        left: 0;
     }
 
     nav a{
@@ -93,7 +143,26 @@ nav a.active{
     nav a.active{
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+        border-bottom: 0.5rem solid var(--accent-color);
+    }
+
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+        gap: 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
     }
 }
 
@@ -107,7 +176,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
+    background-color: var(--bg-color);
 }
 
 .home .home-content h1{
@@ -117,7 +186,7 @@ section{
 }
 
 span{
-    color: #b74b4b;
+    color: var(--accent-color);
 }
 
 .home-content h3{
@@ -138,9 +207,10 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 25px solid var(--accent-color);
     cursor: pointer;
     transition: 0.2s linear;
+    content: var(--profile-img);
 }
 
 .home-img img:hover{
@@ -155,40 +225,40 @@ span{
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid #b74b4b;
+    border: 0.2rem solid var(--accent-color);
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: #b74b4b;
+    color: var(--accent-color);
 }
 
 .social-icons a:hover{
-    color: black;
+    color: var(--bg-color);
     transform: scale(1.3) translateY(-5px);
-    background-color: #b74b4b;
-    box-shadow: 0  0 25px #b74b4b;
+    background-color: var(--accent-color);
+    box-shadow: 0  0 25px var(--accent-color);
 }
 
 .btn{
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: black;
+    background-color: var(--bg-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: #b74b4b;
+    color: var(--accent-color);
     letter-spacing: 0.3rem;
     font-weight: 600;
-    border: 2px solid #b74b4b;
+    border: 2px solid var(--accent-color);
     transition: 0.3s ease;
     cursor: pointer;
 }
 
 .btn:hover{
     transform: scale3d(1.03);
-    background-color: #b74b4b;
-    color: black;
-    box-shadow: 0 0 25px #b74b4b;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--accent-color);
 }
 
 .typing-text{
@@ -203,24 +273,24 @@ span{
 
 .typing-text span::before{
     content: "software Developer";
-    color: #b74b4b;
+    color: var(--accent-color);
     animation: words 20s infinite;
 }
 
 .typing-text span::after{
     content: "";
-    background-color: black;
+    background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid black;
-    right: -8;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor{
     to{
-        border-left: 3px solid #b74b4b;
+        border-left: 3px solid var(--accent-color);
     }
 }
 
@@ -241,30 +311,3 @@ span{
         content: "Script Writer";
     }
 }
-
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
-
