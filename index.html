@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-
     <title>Constantine Portfolio</title>
-</head>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    
+
+<div class="particles"></div>
 <div class="cursor-glow"></div>
-    
+
 <header>
+    <a href="#home" class="logo">Costa</a>
+
+    <input type="checkbox" id="menu-toggle">
 
     <label for="menu-toggle" class="hamburger">
         <span></span>
@@ -26,53 +25,46 @@
     </label>
 
     <nav>
-
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
+        <a href="#stack">Stack</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#certificates">Certificates</a>
-
     </nav>
-
 </header>
 
-
 <section class="home" id="home">
-
     <div class="home-img">
-        <img src="main.png">
+        <img src="main.png" alt="Constantine photo">
     </div>
 
     <div class="home-content">
-
         <h1>Hi, It's <span>Constantine</span></h1>
-
-        <h3 class="typing-text">I'm a <span></span></h3>
-
-        <p>Cloud Engineer | DevOps</p>
+        <p>I'm a Cloud Engineer | DevOps</p>
 
         <div class="social-icons">
+            <a href="https://www.linkedin.com/in/constantine-a-106366240/" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
 
-            <a href="https://www.linkedin.com/in/constantine-a-106366240/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/konstantin13-hi"><i class="fa-brands fa-github"></i></a>
-            <a href="cv.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
+            <a href="https://github.com/konstantin13-hi" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
 
+            <a href="cv.pdf" target="_blank" aria-label="CV">
+                <i class="fa-solid fa-file"></i>
+            </a>
         </div>
 
-        <a href="#" class="btn">Hire me</a>
-
+        <a href="mailto:konstantinchizhevskiy@gmail.com" class="btn">Hire me</a>
     </div>
-
 </section>
 
-
 <section id="skills">
-
     <h2 class="title">Skills</h2>
 
     <div class="skills">
-
         <div class="skill">
             <i class="fa-brands fa-angular"></i>
             <p>Angular</p>
@@ -97,194 +89,168 @@
             <i class="fa-solid fa-server"></i>
             <p>DevOps</p>
         </div>
-
     </div>
-
 </section>
-
 
 <section id="stack">
+    <h2 class="title">DevOps Stack</h2>
 
-<h2 class="title">DevOps Stack</h2>
+    <div class="stack">
+        <div class="stack-item">
+            <i class="fa-brands fa-docker"></i>
+            <p>Docker</p>
+        </div>
 
-<div class="stack">
+        <div class="stack-item">
+            <i class="fa-brands fa-aws"></i>
+            <p>AWS</p>
+        </div>
 
-<div class="stack-item">
-<i class="fa-brands fa-docker"></i>
-<p>Docker</p>
-</div>
+        <div class="stack-item">
+            <i class="fa-solid fa-dharmachakra"></i>
+            <p>Kubernetes</p>
+        </div>
 
-<div class="stack-item">
-<i class="fa-brands fa-aws"></i>
-<p>AWS</p>
-</div>
+        <div class="stack-item">
+            <i class="fa-brands fa-github"></i>
+            <p>GitHub</p>
+        </div>
 
-<div class="stack-item">
-<i class="fa-solid fa-dharmachakra"></i>
-<p>Kubernetes</p>
-</div>
-
-<div class="stack-item">
-<i class="fa-brands fa-github"></i>
-<p>GitHub</p>
-</div>
-
-<div class="stack-item">
-<i class="fa-solid fa-server"></i>
-<p>Terraform</p>
-</div>
-
-</div>
-
+        <div class="stack-item">
+            <i class="fa-solid fa-server"></i>
+            <p>Terraform</p>
+        </div>
+    </div>
 </section>
 
-
 <section id="experience">
-
     <h2 class="title">Experience</h2>
 
     <div class="timeline">
-
         <div class="container left">
-
             <div class="content">
-
                 <h3>Angular Developer</h3>
-
                 <h4>ProMan</h4>
-
                 <p>Jan 2024 – Aug 2025</p>
-
                 <p>Katowice, Poland</p>
-
             </div>
-
         </div>
-
 
         <div class="container right">
-
             <div class="content">
-
                 <h3>Java Software Developer</h3>
-
                 <h4>Smačnyja Rašeńni</h4>
-
                 <p>Sep 2022 – Aug 2023</p>
-
                 <p>Remote</p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
 <section id="education">
-
     <h2 class="title">Education</h2>
 
     <div class="timeline">
-
         <div class="container left">
-
             <div class="content">
-
                 <h3>Gdańsk University of Technology</h3>
-
                 <p>Master's Degree – Computer Networks</p>
-
                 <p>2026 – 2027</p>
-
             </div>
-
         </div>
-
 
         <div class="container right">
-
             <div class="content">
-
                 <h3>Universitat d'Alacant</h3>
-
                 <p>Bachelor – Computer Science</p>
-
                 <p>2022 – 2023</p>
-
             </div>
-
         </div>
-
 
         <div class="container left">
-
             <div class="content">
-
                 <h3>University of Silesia</h3>
-
                 <p>Bachelor – Computer Science</p>
-
                 <p>2021 – 2024</p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-
-    <section id="projects">
-
-<h2 class="title">Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-<h3>DevOps CI/CD Pipeline</h3>
-<p>Automated deployment using Docker and GitHub Actions.</p>
-<a href="#" target="_blank">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>Cloud Infrastructure</h3>
-<p>AWS based scalable infrastructure for web applications.</p>
-<a href="#" target="_blank">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>Angular Web App</h3>
-<p>Modern SPA built with Angular and REST API.</p>
-<a href="#" target="_blank">View Project</a>
-</div>
-
-</div>
-
-</section>
-
 
 <section id="certificates">
-
     <h2 class="title">Certificates</h2>
 
-    <div class="certs">
+    <div class="certificates-grid">
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                </div>
+                <span class="certificate-badge">Cisco</span>
+            </div>
 
-        <a href="GOOGLE_DRIVE_LINK" target="_blank">Cisco Certificate 1</a>
+            <h3>Switching, Routing, and Wireless Essentials</h3>
+            <p class="certificate-org">Cisco Networking Academy</p>
+            <p class="certificate-date">
+                <i class="fa-regular fa-calendar"></i>
+                10 Feb 2024
+            </p>
 
-        <a href="GOOGLE_DRIVE_LINK" target="_blank">Cisco Certificate 2</a>
+            <div class="certificate-actions">
+                <a href="CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_konstantinchizhevskiy-gmail-com_0cf41907-3a87-4bd9-97de-b194cb386682.pdf" target="_blank">
+                    <i class="fa-regular fa-eye"></i>
+                    Preview
+                </a>
+            </div>
+        </div>
 
-        <a href="GOOGLE_DRIVE_LINK" target="_blank">Cisco Certificate 3</a>
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="certificate-badge">Cisco</span>
+            </div>
 
-        <a href="GOOGLE_DRIVE_LINK" target="_blank">Python Certificate</a>
+            <h3>Enterprise Networking, Security, and Automation</h3>
+            <p class="certificate-org">Cisco Networking Academy</p>
+            <p class="certificate-date">
+                <i class="fa-regular fa-calendar"></i>
+                10 Feb 2024
+            </p>
 
+            <div class="certificate-actions">
+                <a href="CCNA-_Enterprise_Networking-_Security-_and_Automation_certificate_konstantinchizhevskiy-gmail-com_168ed6c6-6d8a-447b-a034-b3ef92334017.pdf" target="_blank">
+                    <i class="fa-regular fa-eye"></i>
+                    Preview
+                </a>
+            </div>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-top">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <span class="certificate-badge">Cisco</span>
+            </div>
+
+            <h3>CCNA R&amp;S: Connecting Networks</h3>
+            <p class="certificate-org">Cisco Networking Academy</p>
+            <p class="certificate-date">
+                <i class="fa-regular fa-calendar"></i>
+                03 Jun 2024
+            </p>
+
+            <div class="certificate-actions">
+                <a href="CCNA_R-S-_Connecting_Networks_certificate_konstantinchizhevskiy-gmail-com_6f225615-cc48-4c9d-82f8-b1c1ccac6871.pdf" target="_blank">
+                    <i class="fa-regular fa-eye"></i>
+                    Preview
+                </a>
+            </div>
+        </div>
     </div>
-
 </section>
 
-
 </body>
-
 </html>
